@@ -6,10 +6,10 @@ namespace stonecutter.Controllers
 {
     public class InventoryController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly AppDbContext _context1;
         public InventoryController(AppDbContext appDbContext)
         {
-            _context = appDbContext;
+            _context1 = appDbContext;
         }
         public IActionResult Index()
         {
@@ -25,8 +25,8 @@ namespace stonecutter.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Inventories.Add(inventory);
-                _context.SaveChanges();
+                _context1.Inventories.Add(inventory);
+                _context1.SaveChanges();
                 return RedirectToAction("ViewInventory");
             }
             else { return View(); }
@@ -36,7 +36,7 @@ namespace stonecutter.Controllers
         [HttpGet]
         public IActionResult ViewInventory()
         {
-            var list = _context.Inventories.ToList();
+            var list = _context1.Inventories.ToList();
             return View(list);
         }
        
