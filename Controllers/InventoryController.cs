@@ -27,14 +27,14 @@ namespace stonecutter.Controllers
             {
                 _context.Inventories.Add(inventory);
                 _context.SaveChanges();
-                return RedirectToAction("ViewInventories");
+                return RedirectToAction("ViewInventory");
             }
             else { return View(); }
 
         }
 
         [HttpGet]
-        public IActionResult ViewInventories()
+        public IActionResult ViewInventory()
         {
             var list = _context.Inventories.ToList();
             return View(list);
