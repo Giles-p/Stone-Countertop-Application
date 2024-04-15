@@ -1,48 +1,48 @@
 ﻿@model stonecutter.Models.TimeTable
+
 <html>
 <head>
     <link rel="stylesheet" href="/css/TimeTable.css" />
 </head>
-<body>
-    <h2>Schedule Installation</h2>
-    <form asp-action="CreateTimeTable" mrthod="post">
+    <body>
+        <h2>Edit TimeTable</h2>
+    <form asp-action="EditTimeTable" mrthod="post">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="input-form">
-        <label asp-for="ClientName">Name:</label>
+            <label asp-for="ClientName">Name:</label>
             <input class="form-control" asp-for="ClientName" placeholder="Enter your name" />
             <span asp-validation-for="ClientName" class="text-danger"></span>
-    </div>
+        </div>
 
         <div class="input-form">
-        <label asp-for="Address">Address:</label>
+            <label asp-for="Address">Address:</label>
             <input class="form-control" asp-for="Address" placeholder="Enter your address" />
             <span asp-validation-for="Address" class="text-danger"></span>
-    </div>
+        </div>
 
         <div class="input-form">
-        <label asp-for="DateTime">Date and Time of installation:</label>
+            <label asp-for="DateTime">Date and Time of installation:</label>
             <input class="form-control" asp-for="DateTime" />
             <span asp-validation-for="DateTime" class="text-danger"></span>
-    </div>
+        </div>
 
         <div class="input-form">
-        <label asp-for="PhoneNumber">Phone Number:</label>
+            <label asp-for="PhoneNumber">Phone Number:</label>
             <input class="form-control" asp-for="PhoneNumber" placeholder="Enter your Phone Number" />
             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-    </div>
+        </div>
 
         <div class="input-form">
-        <label asp-for="Email">Email:</label>
+            <label asp-for="Email">Email:</label>
             <input class="form-control" asp-for="Email" placeholder="Enter your Email" />
             <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
+        </div>
 
         <div class="input-form">
-        <label asp-for="Description">Description (optional):</label>
+            <label asp-for="Description">Description (optional):</label>
             <input class="form-control" asp-for="Description" placeholder="Enter any additional information" />
-    </div>
-    <button type="submit">submit</button>
+        </div>
+        <button type="submit">submit</button>
     </form>
-</body>
-    
+    </body>
 </html>

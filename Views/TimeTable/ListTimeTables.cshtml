@@ -4,6 +4,9 @@
 }
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="/css/TimeTable.css" />
+</head>
     <body>
         <h2>List of Scheduled Installations</h2>
         <table id="timetables">
@@ -15,6 +18,8 @@
                     <th>Phone number</th>
                     <th>Email</th>
                     <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,19 +32,17 @@
                     <td>@t.PhoneNumber</td>
                     <td>@t.Email</td>
                     <td>@t.Description</td>
+                    <td class="c-table"><a href="~/TimeTable/EditTimeTable/@t.Id" class="tbButton">Edit</a></td>
+                    <td class="c-table"><a href="~/TimeTable/DeleteTimeTable/@t.Id" class="tbButton">Delete</a></td>
                 </tr>
             }
             <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
+                
             </tr>
             </tbody>
         </table>
 
-        <a href="~/TimeTable/CreateTimeTable">Schedule an installation</a>
+    <a href="~/TimeTable/CreateTimeTable" class="pgButton">Schedule an installation</a>
+    <a href="~/Index" class="pgButton">Back to Main Page</a>
     </body>
 </html>
