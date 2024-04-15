@@ -1,0 +1,64 @@
+﻿#timetables {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    #timetables td, #timetables th {
+        border: 1px solid #000000;
+        padding: 8px;
+    }
+
+.tbButton {
+    background-color: #0c6bee;
+    color: white;
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 10px;
+}
+.c-table {
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 0px;
+}
+    .tbButton:hover {
+        background-color: #065bcf;
+        color: #b9b9b9;
+        text-decoration: none;
+        padding: 7px 13px;
+        border-radius: 10px;
+    }
+
+.pgButton {
+    background-color: #0c6bee;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+    .pgButton:hover {
+        background-color: #065bcf;
+        color: #b9b9b9;
+        text-decoration: none;
+    }
+
+form {
+    background-color: #f2f2f2;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+input {
+    width: 100%;
+}
+
+.input-form {
+    padding-bottom: 10px;
+}
+.form {
+    background-color: #f2f2f2;
+    padding: 35px;
+    border-radius: 15px;
+}
+
