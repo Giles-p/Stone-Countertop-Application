@@ -16,27 +16,27 @@ namespace stonecutter.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult CreateTimeTable()
+        public IActionResult CreateInventory()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult AddInvetory(TimeTable timeTable)
+        public IActionResult AddInvetory(Inventory inventory)
         {
             if (ModelState.IsValid)
             {
-                _context.TimeTables.Add(timeTable);
+                _context.Inventories.Add(inventory);
                 _context.SaveChanges();
-                return RedirectToAction("ListTimeTables");
+                return RedirectToAction("ViewInventories");
             }
             else { return View(); }
 
         }
 
         [HttpGet]
-        public IActionResult ListInventories()
+        public IActionResult ViewInventories()
         {
-            var list = _context.TimeTables.ToList();
+            var list = _context.Inventories.ToList();
             return View(list);
         }
        
