@@ -1,0 +1,44 @@
+﻿@model IEnumerable<stonecutter.Models.Inventory>
+
+@{
+
+}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>List of Scheduled Installations</h2>
+    <table id="timetables">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Stone Type</th>
+                <th>Quantity</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (stonecutter.Models.Inventory t in Model)
+            {
+                <tr>
+                    <td>@t.Id</td>
+                    <td>@t.Name</td>
+                    <td>@t.StoneType</td>
+                    <td>@t.Quantity</td>
+                    <td>@t.DateTime</td>
+                </tr>
+            }
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="~/TimeTable/CreateTimeTable">Schedule an installation</a>
+</body>
+</html>

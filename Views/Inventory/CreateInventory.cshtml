@@ -1,0 +1,31 @@
+﻿@model stonecutter.Models.Inventory
+<html>
+<body>
+    <h2>Schedule Installation</h2>
+    <form asp-action="CreateTimeTable" mrthod="post">
+        <div>
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name" placeholder="Enter your name" />
+        </div>
+
+        <div>
+            <label asp-for="StoneType">Stone Type:</label>
+            <input asp-for="StoneType" placeholder="Enter your address" />
+        </div>
+
+        <div>
+            <label asp-for="DateTime">Date and Time of installation:</label>
+            <input asp-for="DateTime" />
+        </div>
+
+        <div>
+            <label asp-for="Quantity">Quantity:</label>
+            <input asp-for="Quantity" placeholder="Enter your Phone Number" />
+        </div>
+
+
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
